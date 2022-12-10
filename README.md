@@ -1,43 +1,36 @@
 # Powerlevel10k
 ### These are my configurations of powerlevel10k with oh my zsh and GNOME terminal
 - **This is how my terminal looks**
-<img src="terminal.png">
+<img src="Screenshot_20221210_184544.jpg">
 
 ## Installation for Termux
-
-1. Install zsh and setup as default shell
-    - `pkg install zsh`
-    - `chsh -s zsh`
+1. Dont forget to update & upgrade packages
+  - `pkg update -y && pkg upgrade -y`
+2. Install requirements and zsh then setup as default shell
+  - `pkg install git curl nano zsh`
+  - `chsh -s zsh`
     - for detailed instructions <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH">go here</a>
-    - you also have to set your PATH from previous shell
-        - copy export paths from previous shell config file and add it to **.zshrc** in your home directory
-2. Install oh my zsh
-    - Installation Tutorial for oh my zsh can be found <a href="https://github.com/ohmyzsh/ohmyzsh#basic-installation">here</a>
-  
-3. Install powerlevel10k
-    - follow oh my zsh installation instructions <a href="https://github.com/romkatv/powerlevel10k#installation">from here</a>
-
-4. Download these fonts and install them
-   
-   - <a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf">MesloLGS NF Regular.ttf</a>
-   - <a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf">MesloLGS NF Bold.ttf</a>
-   - <a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf">MesloLGS NF Italic.ttf</a>
-   - <a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf">MesloLGS NF Bold Italic.ttf</a>
-5. Set custom font in terminal
-      - Open your __Terminal Preferences__ in *Profile Section* go to the *Text Tab* check the *Custom Font*
-      - Select `MesloLGS NF Regular font`
-6. Configure powerlevel10k
-      - For your own costomizations
-        - run `p10k configure` it will take care for the rest of steps
-      - For my costomizations
-        - clone this repo and replace **.zshrc** and **.p10k.zsh** from your home directory with these
-7. Install colorls
-    - run `pkg install colorls`
-    - open **.zshrc** and add this at the end
-        > `alias lc="colorls -sd"`
-    - test this by typing `lc` in your terminal
-        
-7. Changing customizations
+  - you also have to set your PATH from previous shell
+  - copy export paths from previous shell config file and add it to **.zshrc** in your home directory
+    - `echo $SHELL
+      /usr/bin/zsh`
+3. Install oh my zsh
+  - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+  - Installation Tutorial for oh my zsh can be found <a href="https://github.com/ohmyzsh/ohmyzsh#basic-installation">here</a> 
+4. Install powerlevel10k
+  - `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+  - follow oh my zsh installation instructions <a href="https://github.com/romkatv/powerlevel10k#installation">from here</a>
+5. Auto Suggestion
+  - `git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions`
+6. Auto Highlight
+  - `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting`
+7. Configure powerlevel10k
+  - For your own costomizations
+    - run `p10k configure` it will take care for the rest of steps
+  - For my costomizations
+    - clone this repo and replace **.zshrc** and **.p10k.zsh** in your home directory
+    - `git clone https://github.com/rhxoxome/powerlevel10k.git`      
+8. Changing customizations
       - Edit the **.zshrc** and **.p10k.zsh** (*RISKY*)
       - run `p10k configure` (*SAFE*)
 ## How to ask for help
