@@ -29,9 +29,14 @@
     - run `p10k configure` it will take care for the rest of steps
   - For my costomizations
     - clone this repo and replace **.zshrc** and **.p10k.zsh** in your home directory
-    - `git clone https://github.com/rhxoxome/powerlevel10k.git`      
+    - `git clone https://github.com/rhxoxome/powerlevel10k`
+    - `cd powerlevel10k && cp .zshrc ~/.zshrc && cp .p10k.zsh ~/.p10k.zsh && cd $HOME && rm -rf powerlevel10k`     
 8. Changing customizations
       - Edit the **.zshrc** and **.p10k.zsh** (*RISKY*)
       - run `p10k configure` (*SAFE*)
 ## How to ask for help
 - The best way to ask for help is to open an issue.
+## Source
+- <a href="https://medium.com/@satriajanaka09/setup-zsh-oh-my-zsh-powerlevel10k-on-ubuntu-20-04-c4a4052508fd">Medium.com/@SatriaJanaka09</a>
+
+Have fun with your terminal ! 🎉
